@@ -20,7 +20,7 @@ const PrivacyPolicy = () => {
           <div className="text-center">
             <h1 className="text-3xl font-bold text-foreground mb-2">Privacy Policy</h1>
             <p className="text-muted-foreground">MASWALIPESA Application</p>
-            <p className="text-sm text-muted-foreground mt-1">Last updated: April 4, 2022</p>
+            <p className="text-sm text-muted-foreground mt-1">Last updated: July 26, 2025</p>
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@ const PrivacyPolicy = () => {
                     
                     <p className="text-foreground"><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone, or a digital tablet.</p>
                     
-                    <p className="text-foreground"><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to <span className="text-accent font-semibold">NOSOLITE COMPANY LIMITED</span>, Dar es salaam, Tanzania.</p>
+                    <p className="text-foreground"><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to <span className="text-accent font-semibold">IKINDU TECHNOLOGIES COMPANY LIMITED</span>, Dar es salaam, Tanzania.</p>
                     
                     <p className="text-foreground"><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</p>
                     

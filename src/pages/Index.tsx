@@ -6,7 +6,7 @@ const Index = () => {
     <div className="min-h-screen flex items-center justify-center bg-background">
       <div className="text-center space-y-6">
         <h1 className="text-4xl font-bold mb-4 text-foreground">MASWALIPESA</h1>
-        <p className="text-xl text-muted-foreground">Healthcare Application</p>
+        <p className="text-xl text-muted-foreground">Multiplayer Gaming Application</p>
         <div className="mt-8">
           <Link to="/privacy-policy">
             <Button variant="outline" className="gap-2">
