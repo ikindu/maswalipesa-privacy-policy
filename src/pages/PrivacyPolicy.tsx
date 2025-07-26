@@ -19,7 +19,8 @@ const PrivacyPolicy = () => {
           </div>
           <div className="text-center">
             <h1 className="text-3xl font-bold text-foreground mb-2">Privacy Policy</h1>
-            <p className="text-muted-foreground">MASWALIPESA Application</p>
+            <p className="text-muted-foreground">MASWALIPESA Gaming Application</p>
+            <p className="text-muted-foreground">Prepared by: IKINDU TECHNOLOGIES COMPANY LIMITED</p>
             <p className="text-sm text-muted-foreground mt-1">Last updated: July 26, 2025</p>
           </div>
         </div>
