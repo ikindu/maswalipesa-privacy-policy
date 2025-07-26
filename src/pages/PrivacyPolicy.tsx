@@ -126,19 +126,6 @@ const PrivacyPolicy = () => {
                   </p>
                 </div>
 
-                <div className="space-y-4">
-                  <h4 className="text-lg font-medium text-foreground">Information Collected while Using the Application</h4>
-                  <p className="text-foreground leading-relaxed">
-                    While using Our Application, in order to provide features of Our Application, we may collect, with your prior permission:
-                  </p>
-                  <ul className="list-disc list-inside pl-4 space-y-2 text-foreground">
-                    <li>Information regarding your background location</li>
-                    <li>Pictures and other information from your Device's camera and photo library</li>
-                  </ul>
-                  <p className="text-foreground leading-relaxed">
-                    If you have 'background location turned on, the MASWALIPESA will, from time to time, tell us about your device's location even if you are not directly interacting with the application in order to provide the best way to provide our service, we use location to suggest the nearby health centers, pharmacies, and medical laboratories so as to help doctors to suggest the nearby location of the service to a user/patient during the consultation also can be used as one of the criteria for linking patient/user with doctors.
-                  </p>
-                </div>
               </div>
             </section>
 
