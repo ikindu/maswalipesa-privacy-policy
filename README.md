@@ -1,4 +1,4 @@
-# MASWALIPESA Privary Policy
+# MASWALIPESA Privacy Policy
 
 To install this project follow these steps:
 
