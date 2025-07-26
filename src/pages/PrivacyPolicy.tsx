@@ -281,7 +281,7 @@ const PrivacyPolicy = () => {
                 
                 <div className="flex items-center gap-3 text-foreground">
                   <Globe className="h-5 w-5 text-accent" />
-                  <span>By visiting this page on our website: <a href="http://www.privacy.policy.maswalipesa.com" className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">www.privacy.policy.maswalipesa.com</a></span>
+                  <span>By visiting this page on our website: <a href="https://privacy-policy.maswalipesa.com/privacy-policy" className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">www.maswalipesa.com/privacy-policy</a></span>
                 </div>
               </div>
             </section>
