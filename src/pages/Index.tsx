@@ -73,7 +73,7 @@ function PolicySectionNav() {
 const Index = () => {
   return (
     <div className="min-h-screen scroll-smooth bg-background policy-page">
-      <header className="border-b border-white/10 bg-[#03232b] text-white">
+      <header className="border-b border-white/10 bg-[#03232b] text-white py-6">
         <div className="mx-auto max-w-4xl px-4 py-8">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-5">
             <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-[5px] bg-primary p-1 shadow-md sm:h-20 sm:w-20 sm:p-1.5">
