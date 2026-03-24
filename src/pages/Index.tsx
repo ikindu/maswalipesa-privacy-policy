@@ -7,13 +7,15 @@ const Index = () => {
       <header className="border-b border-white/10 bg-[#03232b] text-white">
         <div className="mx-auto max-w-4xl px-4 py-8">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-5">
-            <img
-              src="/maswalipesa-logo.png"
-              alt="MASWALIPESA"
-              width={80}
-              height={80}
-              className="h-16 w-16 shrink-0 rounded-xl shadow-md ring-1 ring-white/10 sm:h-20 sm:w-20"
-            />
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-[5px] bg-primary p-1 shadow-md sm:h-20 sm:w-20 sm:p-1.5">
+              <img
+                src="/maswalipesa-logo.png"
+                alt="MASWALIPESA"
+                width={80}
+                height={80}
+                className="h-full w-full object-contain"
+              />
+            </div>
             <div className="min-w-0 text-left">
               <p className="font-title text-3xl font-bold tracking-[0.06em] text-primary sm:text-4xl md:text-5xl">
                 MASWALIPESA
@@ -303,13 +305,15 @@ const Index = () => {
       <footer className="border-t border-white/10 bg-[#03232b] py-10 text-white">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="mb-4 flex items-center gap-3">
-            <img
-              src="/maswalipesa-logo.png"
-              alt="MASWALIPESA"
-              width={40}
-              height={40}
-              className="h-10 w-10 shrink-0 object-contain"
-            />
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-[5px] bg-primary p-0.5">
+              <img
+                src="/maswalipesa-logo.png"
+                alt="MASWALIPESA"
+                width={40}
+                height={40}
+                className="h-full w-full object-contain"
+              />
+            </div>
             <span className="font-title text-xl text-primary">MASWALIPESA</span>
           </div>
           <p className="mb-2 text-sm opacity-60">
