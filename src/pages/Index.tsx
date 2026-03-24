@@ -1,9 +1,78 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Globe } from "lucide-react";
+import { ChevronDown, Globe, Mail } from "lucide-react";
+
+/** Section anchors — sticky pills (desktop) and Jump to Section (mobile), aligned with terms.maswalipesa.com */
+const POLICY_NAV_SECTIONS = [
+  { id: "introduction", label: "Introduction" },
+  { id: "interpretation", label: "Interpretation" },
+  { id: "collecting-data", label: "Collecting data" },
+  { id: "use-of-data", label: "Use of data" },
+  { id: "retention", label: "Retention" },
+  { id: "transfer", label: "Transfer" },
+  { id: "disclosure", label: "Disclosure" },
+  { id: "security", label: "Security" },
+  { id: "children", label: "Children's privacy" },
+  { id: "changes", label: "Changes" },
+  { id: "contact", label: "Contact" },
+] as const;
+
+function PolicySectionNav() {
+  const [open, setOpen] = useState(false);
+  const pillClass =
+    "shrink-0 rounded-full border border-border bg-background px-3 py-1.5 text-sm text-foreground transition-colors hover:bg-primary hover:text-primary-foreground";
+
+  return (
+    <nav className="sticky top-0 z-10 border-b border-border bg-muted">
+      <div className="mx-auto hidden max-w-4xl overflow-x-auto px-4 py-4 md:block">
+        <div className="flex gap-3 whitespace-nowrap">
+          {POLICY_NAV_SECTIONS.map((item) => (
+            <a key={item.id} href={`#${item.id}`} className={pillClass}>
+              {item.label}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-4xl px-4 py-3 md:hidden">
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          className="flex w-full items-center justify-between rounded-lg border border-border bg-background px-4 py-2.5 text-sm font-medium text-foreground"
+          aria-expanded={open}
+          aria-controls="policy-section-jump-menu"
+        >
+          <span>Jump to Section</span>
+          <ChevronDown
+            className={`h-4 w-4 shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+            aria-hidden
+          />
+        </button>
+        {open ? (
+          <div
+            id="policy-section-jump-menu"
+            className="mt-2 overflow-hidden rounded-lg border border-border bg-background shadow-lg"
+          >
+            {POLICY_NAV_SECTIONS.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className="block border-b border-border px-4 py-3 text-sm text-foreground last:border-b-0 hover:bg-muted/80"
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        ) : null}
+      </div>
+    </nav>
+  );
+}
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background policy-page">
+    <div className="min-h-screen scroll-smooth bg-background policy-page">
       <header className="border-b border-white/10 bg-[#03232b] text-white">
         <div className="mx-auto max-w-4xl px-4 py-8">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-5">
@@ -33,10 +102,12 @@ const Index = () => {
         </div>
       </header>
 
-      <div className="max-w-4xl mx-auto px-4 py-8">
+      <PolicySectionNav />
+
+      <div className="mx-auto max-w-4xl px-4 py-8">
         <Card>
           <CardContent className="p-8 space-y-8">
-            <section className="space-y-4">
+            <section id="introduction" className="scroll-mt-24 space-y-4">
               <p className="text-foreground leading-relaxed">
                 This Privacy Policy describes Our policies and procedures on the collection, use, and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
               </p>
@@ -48,7 +119,7 @@ const Index = () => {
               </p>
             </section>
 
-            <section className="space-y-6">
+            <section id="interpretation" className="scroll-mt-24 space-y-6">
               <h2 className="border-b border-primary/25 pb-2 text-2xl font-semibold text-foreground">
                 Interpretation and Definitions
               </h2>
@@ -94,8 +165,8 @@ const Index = () => {
               </div>
             </section>
 
-            <section className="space-y-6">
-              <h2 className="text-2xl font-semibold text-foreground border-b border-primary/25 pb-2">
+            <section id="collecting-data" className="scroll-mt-24 space-y-6">
+              <h2 className="border-b border-primary/25 pb-2 text-2xl font-semibold text-foreground">
                 Collecting and Using Your Personal Data
               </h2>
 
@@ -135,8 +206,8 @@ const Index = () => {
               </div>
             </section>
 
-            <section className="space-y-6">
-              <h2 className="text-2xl font-semibold text-foreground border-b border-primary/25 pb-2">
+            <section id="use-of-data" className="scroll-mt-24 space-y-6">
+              <h2 className="border-b border-primary/25 pb-2 text-2xl font-semibold text-foreground">
                 Use of Your Personal Data
               </h2>
 
@@ -154,8 +225,8 @@ const Index = () => {
               </ul>
             </section>
 
-            <section className="space-y-4">
-              <h2 className="text-2xl font-semibold text-foreground border-b border-primary/25 pb-2">
+            <section id="retention" className="scroll-mt-24 space-y-4">
+              <h2 className="border-b border-primary/25 pb-2 text-2xl font-semibold text-foreground">
                 Retention of Your Personal Data
               </h2>
 
@@ -168,8 +239,8 @@ const Index = () => {
               </p>
             </section>
 
-            <section className="space-y-4">
-              <h2 className="text-2xl font-semibold text-foreground border-b border-primary/25 pb-2">
+            <section id="transfer" className="scroll-mt-24 space-y-4">
+              <h2 className="border-b border-primary/25 pb-2 text-2xl font-semibold text-foreground">
                 Transfer of Your Personal Data
               </h2>
 
@@ -186,8 +257,8 @@ const Index = () => {
               </p>
             </section>
 
-            <section className="space-y-6">
-              <h2 className="text-2xl font-semibold text-foreground border-b border-primary/25 pb-2">
+            <section id="disclosure" className="scroll-mt-24 space-y-6">
+              <h2 className="border-b border-primary/25 pb-2 text-2xl font-semibold text-foreground">
                 Disclosure of Your Personal Data
               </h2>
 
@@ -220,8 +291,8 @@ const Index = () => {
               </div>
             </section>
 
-            <section className="space-y-4">
-              <h2 className="text-2xl font-semibold text-foreground border-b border-primary/25 pb-2">
+            <section id="security" className="scroll-mt-24 space-y-4">
+              <h2 className="border-b border-primary/25 pb-2 text-2xl font-semibold text-foreground">
                 Security of Your Personal Data
               </h2>
 
@@ -230,8 +301,8 @@ const Index = () => {
               </p>
             </section>
 
-            <section className="space-y-4">
-              <h2 className="text-2xl font-semibold text-foreground border-b border-primary/25 pb-2">
+            <section id="children" className="scroll-mt-24 space-y-4">
+              <h2 className="border-b border-primary/25 pb-2 text-2xl font-semibold text-foreground">
                 Children's Privacy
               </h2>
 
@@ -244,8 +315,8 @@ const Index = () => {
               </p>
             </section>
 
-            <section className="space-y-4">
-              <h2 className="text-2xl font-semibold text-foreground border-b border-primary/25 pb-2">
+            <section id="changes" className="scroll-mt-24 space-y-4">
+              <h2 className="border-b border-primary/25 pb-2 text-2xl font-semibold text-foreground">
                 Changes to this Privacy Policy
               </h2>
 
@@ -262,8 +333,8 @@ const Index = () => {
               </p>
             </section>
 
-            <section className="space-y-4">
-              <h2 className="text-2xl font-semibold text-foreground border-b border-primary/25 pb-2">
+            <section id="contact" className="scroll-mt-24 space-y-4">
+              <h2 className="border-b border-primary/25 pb-2 text-2xl font-semibold text-foreground">
                 Contact us
               </h2>
 
