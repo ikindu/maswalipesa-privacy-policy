@@ -347,8 +347,8 @@ const Index = () => {
                   <Mail className="h-5 w-5 text-primary" />
                   <span>
                     By email:{" "}
-                    <a href="mailto:info@ikindutechnologies.com" className="text-accent hover:underline">
-                      info@ikindutechnologies.com
+                    <a href="mailto:info@ikindutechnologies.co.tz" className="text-accent hover:underline">
+                      info@ikindutechnologies.co.tz
                     </a>
                   </span>
                 </div>
